@@ -86,6 +86,7 @@ void setup() {
   std::vector<std::string> args;
   args.push_back("192.168.4.1");
   runner->dispatch_with_args('I', args);
+  runner->dispatch('+');
 }
 
 void loop() {

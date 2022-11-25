@@ -32,6 +32,7 @@ class Command
     }
     virtual void parseArgs(std::vector<std::string> args) {}
     virtual bool noExecute(DMD3 *canvas = NULL) { return false; }
+    virtual int demoCommmand() { return 1;}    
 };
 
 class NullCommand : public Command

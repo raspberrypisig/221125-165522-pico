@@ -39,6 +39,7 @@
 #include "testChangePanelSize.h"
 #include "reboot.h"
 #include "testScrollOneLine.h"
+#include "testDemoMode.h"
 
 class CommandList
 {
@@ -163,8 +164,8 @@ class CommandList
       TestChangePanelSizeCommand *testChangePanelSizeCommand = new TestChangePanelSizeCommand();
       commands['~'] = testChangePanelSizeCommand;
 
-
-
+      TestDemoCommand *testDemoCommand = new TestDemoCommand();
+      commands['+'] = testDemoCommand;
 
       return commands;
     }

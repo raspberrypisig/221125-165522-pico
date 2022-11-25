@@ -88,6 +88,13 @@ void Dispatcher::dispatch(uint8_t command)
     return;
     
   currentCommand = (int)command;
+  // If demo
+  if (command == '+') {
+    commands[command]->execute(canvas);
+    int demoCommand = commands[command]->demoCommmand();
+    commands[demoCommand]->execute(canvas);
+  }
+
   commands[command]->execute(canvas);  
 }
 
