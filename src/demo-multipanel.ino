@@ -83,7 +83,9 @@ void setup() {
   //runner = new Dispatcher(&display);
   runner = new Dispatcher(display);
   //runner->dispatch('1');
-  runner->dispatch('2');
+  std::vector<std::string> args;
+  args.push_back("192.168.4.1");
+  runner->dispatch_with_args('I', args);
 }
 
 void loop() {

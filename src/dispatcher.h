@@ -28,6 +28,7 @@ class Dispatcher
   public:
     Dispatcher(DMD3 *dmd);
     void dispatch(uint8_t command);
+    void dispatch_with_args(uint8_t command, std::vector<std::string> args);
     void handleSerialInput(Stream& s);
     void parseSerialInput();
     void updatePanels();

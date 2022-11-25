@@ -90,3 +90,9 @@ void Dispatcher::dispatch(uint8_t command)
   currentCommand = (int)command;
   commands[command]->execute(canvas);  
 }
+
+void Dispatcher::dispatch_with_args(uint8_t command, std::vector<std::string> args) {
+  currentCommand = (int)command;
+  commands[command]->parseArgs(args);
+  commands[command]->execute(canvas);  
+}
